@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 19bfde53d999a507bb35714e3a543b610c56b00ddfd7c1a4be0f88d5b7edbdc3
+-- hash: 0b4e93056d25cc7ab74dbcfb2bb7dac78fe14d740f49d03221cf8dfd00b986d4
 
 name:           c4c
 version:        0.1.0.0
@@ -25,6 +25,12 @@ source-repository head
   location: https://github.com/t4ccer/c4c
 
 library
+  exposed-modules:
+      C4C
+      C4C.Entries
+      C4C.Error
+      C4C.Substitute
+      C4C.Utils
   other-modules:
       Paths_c4c
   hs-source-dirs:
