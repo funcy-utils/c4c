@@ -20,7 +20,7 @@ library:
   source-dirs: src
 
 executables:
-  c4c-exe:
+  c4c:
     main:                Main.hs
     source-dirs:         app
     ghc-options:

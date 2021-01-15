@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0b4e93056d25cc7ab74dbcfb2bb7dac78fe14d740f49d03221cf8dfd00b986d4
+-- hash: 131838f8d5167e6423a771fcc440be4c8a428c9dd210516b951ab1440446162f
 
 name:           c4c
 version:        0.1.0.0
@@ -41,7 +41,7 @@ library
     , megaparsec
   default-language: Haskell2010
 
-executable c4c-exe
+executable c4c
   main-is: Main.hs
   other-modules:
       Paths_c4c
