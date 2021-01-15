@@ -1,0 +1,34 @@
+name:                c4c
+version:             0.1.0.0
+github:              "t4ccer/c4c"
+license:             BSD3
+author:              "t4ccer"
+maintainer:          "t4ccre@gmail.com"
+copyright:           "t4ccer"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/t4ccer/c4c#readme>
+
+dependencies:
+- base >= 4.14.0 && < 4.14.1
+
+library:
+  source-dirs: src
+
+executables:
+  c4c-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+    - -Wno-unused-do-bind
+    - -Wpartial-fields
+    - -Wincomplete-uni-patterns
+    dependencies:
+    - c4c
+

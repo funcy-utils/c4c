@@ -1,0 +1,48 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 97a2b727428a9155bb80886704d50c3911df8b857e15e7f4cfe9d4dfd5cb81f3
+
+name:           c4c
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/t4ccer/c4c#readme>
+homepage:       https://github.com/t4ccer/c4c#readme
+bug-reports:    https://github.com/t4ccer/c4c/issues
+author:         t4ccer
+maintainer:     t4ccre@gmail.com
+copyright:      t4ccer
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/t4ccer/c4c
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_c4c
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.14.0 && <4.14.1
+  default-language: Haskell2010
+
+executable c4c-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_c4c
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Wno-unused-do-bind -Wpartial-fields -Wincomplete-uni-patterns
+  build-depends:
+      base >=4.14.0 && <4.14.1
+    , c4c
+  default-language: Haskell2010
