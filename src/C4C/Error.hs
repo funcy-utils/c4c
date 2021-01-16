@@ -1,7 +1,9 @@
 module C4C.Error(Error(..)) where
 
+import Data.Text
+
 data Error
-  = ErrorIncorrectConfigEntry String
-  | ErrorEntryNotDefined String
+  = ErrorIncorrectConfigEntry Text
+  | ErrorEntryNotDefined Text
   | ErrorParser
   deriving Show
