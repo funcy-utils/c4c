@@ -1,4 +1,4 @@
-module C4C.Error where
+module C4C.Error(Error(..)) where
 
 data Error
   = ErrorIncorrectConfigEntry String

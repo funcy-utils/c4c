@@ -1,4 +1,4 @@
-module C4C.Entries where
+module C4C.Entries(Entry(..), Entries(..), mkEntries, lookupEntry) where
 
 import qualified Data.Map as M
 

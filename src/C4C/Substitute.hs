@@ -1,4 +1,4 @@
-module C4C.Substitute where
+module C4C.Substitute(substitute, parseConfigLines) where
 
 import           Data.Either          (fromRight)
 import           Data.Maybe           (catMaybes)
@@ -31,9 +31,6 @@ oneCharP :: Entries -> Parser (Either Error String)
 oneCharP _ = do
   c <- anySingle
   return $ Right [c]
-
-parseConfigFile :: FilePath -> IO (Either Error Entries)
-parseConfigFile fp = parseConfigLines . lines <$> readFile fp
 
 parseConfigLines :: [String] -> Either Error Entries
 parseConfigLines = fmap (mkEntries . catMaybes) . traverse parseConfigLine

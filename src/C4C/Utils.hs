@@ -1,4 +1,4 @@
-module C4C.Utils where
+module C4C.Utils(Parser, removeExt) where
 
 import           Data.Void       (Void)
 import           Text.Megaparsec (Parsec)
