@@ -6,7 +6,9 @@ import           Text.Megaparsec (Parsec)
 type Parser a = Parsec Void String a
 
 removeExt :: String -> String
-removeExt = concat . joinWith "." .  init . wordsWhen (=='.')
+removeExt inp = reverse $ drop len $ reverse inp
+  where
+    len = (+1) $ length $ takeWhile ('.' /=) $ reverse inp
 
 joinWith :: a -> [a] -> [a]
 joinWith = go
