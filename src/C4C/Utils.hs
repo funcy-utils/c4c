@@ -10,3 +10,4 @@ removeExt :: String -> String
 removeExt inp = reverse $ drop len $ reverse inp
   where
     len = (+1) $ length $ takeWhile ('.' /=) $ reverse inp
+
