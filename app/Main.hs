@@ -1,6 +1,6 @@
 module Main where
-import           System.Environment
 import           C4C
+import           C4C.Params
 
 main :: IO ()
-main = getArgs >>= run
+main = getParams >>= run

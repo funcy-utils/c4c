@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3f7db2146b42852e7284c4abf5355ba7871f5027c1ae9fdbd2629912796611bb
+-- hash: 4f8a36987fc1d6331a9c225985f35c086cd43fb109b6fb60181a5396068324c0
 
 name:           c4c
 version:        0.1.0.0
@@ -30,6 +30,7 @@ library
       C4C.Entries
       C4C.Error
       C4C.Input
+      C4C.Params
       C4C.Utils
   other-modules:
       Paths_c4c
@@ -37,6 +38,7 @@ library
       src
   build-depends:
       base >=4.14.0 && <4.15.0
+    , cmdargs
     , containers
     , megaparsec
     , text
@@ -53,6 +55,7 @@ executable c4c
   build-depends:
       base >=4.14.0 && <4.15.0
     , c4c
+    , cmdargs
     , containers
     , megaparsec
     , text
