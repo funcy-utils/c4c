@@ -7,6 +7,7 @@ import           System.Console.CmdArgs
 data Parameters = Parameters
   { pOutputDir       :: FilePath
   , pRemoveExtension :: Bool
+  , pTestConfig      :: Bool
   , pConfig          :: FilePath
   , pFiles           :: [FilePath]
   }
@@ -17,6 +18,7 @@ params =
   Parameters
     { pOutputDir       = "."  &= name "o" &= name "output" &= explicit
     , pRemoveExtension = True &= name "remove-ext" &= explicit
+    , pTestConfig = False &= name "test-config" &= explicit
     , pConfig = def &= name "config" &= explicit
     , pFiles = [] &= args &= typ "FILES"
     }

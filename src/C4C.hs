@@ -3,10 +3,12 @@
 
 module C4C(run) where
 
+import qualified Data.Map          as M
 import           Data.Text         (Text)
 import qualified Data.Text         as T
 import qualified Data.Text.IO.Utf8 as UTF8
 import           System.Exit
+import           Text.Printf
 
 import           C4C.Entries
 import           C4C.Error
@@ -21,6 +23,8 @@ run Parameters{..} = do
     case config of
       Left e -> print e
       Right config' -> do
+        when pTestConfig $ forM_ (M.toList $ unEntries config') $ \(label, val) -> do
+          putStrLn $ printf "%s: %s" label val
         forM_ pFiles $ \f -> do
           input <- parseInput <$> UTF8.readFile f
           let newFP = pOutputDir <> "/" <> if pRemoveExtension then removeExt f else f
