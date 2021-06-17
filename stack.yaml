@@ -1,4 +1,6 @@
 resolver: lts-17.12
 packages:
 - . 
-
+nix:
+  enable: true
+  pure: true
